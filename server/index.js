@@ -24,6 +24,9 @@ const PORT = process.env.PORT || 5000 ;
 
 app.use(express.static(path.join(__dirname , "public") ))
 
+app.use("/",(req,res)=>{
+    res.send("<center><h1>Backend Server is starting...</h1></center>")
+})
 const server = app.listen(PORT,()=>{
 
     console.log(`Server running on port  ${PORT} : ${process.env.NODE_ENV}`)
